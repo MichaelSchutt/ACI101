@@ -1,4 +1,11 @@
 import UIKit
+// App Center
+import AppCenter
+import AppCenterDistribute
+import AppCenterCrashes
+import AppCenterAnalytics
+import AppCenterPush
+// e3252815-bf0b-499f-8173-e3dc771ea72b
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -9,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        MSAppCenter.start("e3252815-bf0b-499f-8173-e3dc771ea72b", withServices: [MSDistribute.self, MSCrashes.self, MSAnalytics.self, MSPush.self])
+        
         return true
     }
 
